@@ -3,7 +3,7 @@ from flask_login import LoginManager, UserMixin, login_user, login_required, log
 from werkzeug.security import generate_password_hash, check_password_hash
 
 app = Flask(__name__)
-app.secret_key = 'your-secret-key-here'  # In a real application, use a secure key
+app.secret_key = 'your-secret-key-here'  
 
 login_manager = LoginManager()
 login_manager.init_app(app)
@@ -17,7 +17,6 @@ class User(UserMixin):
 def load_user(user_id):
     return User(user_id)
 
-# User storage (in a real application, use a database)
 users = {
     'user': {
         'password': generate_password_hash('qwerty')

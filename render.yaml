@@ -2,7 +2,9 @@ services:
   - type: web
     name: web-labs
     env: python
-    buildCommand: pip install -r requirements.txt
+    buildCommand: |
+      pip install -r requirements.txt
+      python init_app.py
     startCommand: gunicorn app:application
     envVars:
       - key: PYTHON_VERSION

@@ -4,11 +4,16 @@ from flask_login import LoginManager, UserMixin, login_user, login_required, log
 from werkzeug.security import generate_password_hash, check_password_hash
 from datetime import datetime, UTC
 import re
+import os
 
 app = Flask(__name__)
 app.config.from_pyfile('config.py')
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
+# Создаем директорию для базы данных, если она не существует
+db_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'instance')
+os.makedirs(db_dir, exist_ok=True)
+
+app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{os.path.join(db_dir, "users.db")}'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)

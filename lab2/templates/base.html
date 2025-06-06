@@ -14,26 +14,26 @@
 <body class="d-flex flex-column h-100">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="/">Flask App</a>
+            <a class="navbar-brand" href="{{ url_for('index') }}">Flask App</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="/url_params">URL параметры</a>
+                        <a class="nav-link" href="{{ url_for('url_params') }}">URL параметры</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/headers">Заголовки</a>
+                        <a class="nav-link" href="{{ url_for('headers') }}">Заголовки</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/cookies">Cookie</a>
+                        <a class="nav-link" href="{{ url_for('cookies') }}">Cookie</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/form_params">Параметры формы</a>
+                        <a class="nav-link" href="{{ url_for('form_params') }}">Параметры формы</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/phone">Телефон</a>
+                        <a class="nav-link" href="{{ url_for('phone') }}">Телефон</a>
                     </li>
                 </ul>
             </div>

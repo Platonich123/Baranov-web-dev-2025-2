@@ -6,10 +6,10 @@
 <h1>Добро пожаловать в Flask App</h1>
 <p>Выберите нужный раздел в меню навигации:</p>
 <ul>
-    <li><a href="/url_params">URL параметры</a> - просмотр параметров URL</li>
-    <li><a href="/headers">Заголовки</a> - просмотр заголовков запроса</li>
-    <li><a href="/cookies">Cookie</a> - работа с cookie</li>
-    <li><a href="/form_params">Параметры формы</a> - просмотр параметров формы</li>
-    <li><a href="/phone">Телефон</a> - валидация номера телефона</li>
+    <li><a href="{{ url_for('url_params') }}">URL параметры</a> - просмотр параметров URL</li>
+    <li><a href="{{ url_for('headers') }}">Заголовки</a> - просмотр заголовков запроса</li>
+    <li><a href="{{ url_for('cookies') }}">Cookie</a> - работа с cookie</li>
+    <li><a href="{{ url_for('form_params') }}">Параметры формы</a> - просмотр параметров формы</li>
+    <li><a href="{{ url_for('phone') }}">Телефон</a> - валидация номера телефона</li>
 </ul>
 {% endblock %} 

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Home page{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div class="card-body">
+        <h1 class="card-title">Welcome!</h1>
+        <p class="card-text">You visited this page {{ visits }} {% if visits == 1 %}time{% else %}times{% endif %}.</p>
+    </div>
+</div>
+{% endblock %} 
